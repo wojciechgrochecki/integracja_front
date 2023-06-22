@@ -40,7 +40,8 @@
     resize: none;
 }
 
-.form input:focus, .form textarea:focus {
+.form input:focus,
+.form textarea:focus {
     box-shadow: 0 0 0 1px orange;
     border: 1px solid orange;
 }

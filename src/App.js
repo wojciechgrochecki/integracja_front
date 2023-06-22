@@ -2,15 +2,12 @@ import './App.css';
 import RegistrationForm from './components/Register/RegistrationForm';
 import LoginForm from './components/Login/LoginForm';
 import { Route, Routes } from 'react-router-dom';
-import PromotionList from './components/PromotionsPage/PromotionList';
 import ProtectedRoute from './hooks/ProtectedRoute/ProtectedRoute'
 import { UserProvider } from './hooks/auth';
+import MainPage from './components/MainPage/MainPage'
+import AdminPanel from './components/AdminPanel/AdminPanel/AdminPanel';
 
 
-
-// import PromotionAddForm from './components/AddPromotion'
-// import EditPromotion from './components/EditPromotion'
-// import SinglePromotion from './components/PromotionsPage/SinglePromotion';
 
 
 function App() {
@@ -21,10 +18,8 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<PromotionList />} />
-          {/* <Route path="/addPromotion" element={<PromotionAddForm />} />
-          <Route path="/singlePromotion/:id" element={<SinglePromotion />} />
-          <Route path="/editPromotion/:id" element={<EditPromotion />} /> */}
+          <Route path="/" element={<MainPage />} />
+          <Route path="/adminPanel" element={<AdminPanel />} />
         </Route>
       </Routes>
     </UserProvider>

@@ -4,7 +4,7 @@ import { useAuth } from "../../hooks/auth";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-    const [formData, setFormData] = useState({ username: "User1", password: "TestPassword123@" })
+    const [formData, setFormData] = useState({ username: "user", password: "user" })
     const [error, setError] = useState("")
     const { login } = useAuth();
 
